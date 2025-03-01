@@ -29,10 +29,10 @@ jobs:
       run: ./gradlew build
 
     - name: Upload JAR artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: my-app-jar
-        path: build/libs/*.jar
+        name: app-jar
+        path: ./output/
 
     - name: Run tests
       run: ./gradlew test
